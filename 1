@@ -6,7 +6,6 @@ local BLOCKED_TOOL_NAME = "Protein Egg"
 local function neutralizeTool(tool)
     for _, desc in ipairs(tool:GetDescendants()) do
         if desc:IsA("Script") or desc:IsA("LocalScript") then
-            -- Si no quieres destruirlos, simplemente los deshabilitas:
             if desc:IsA("LocalScript") then
                 desc.Disabled = true
             else
